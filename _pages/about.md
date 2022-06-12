@@ -2,23 +2,25 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: > 
+  Research Fellow @ <a href='https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality'>WZB Berlin</a> • PhD in Political Science @ <a href='https://polisci.columbia.edu/'>Columbia University</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: profile_pic.jpg
+  address: 
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a post-doctoral fellow at the [Institutions and Political Inequality Unit](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality) at Berlin Social Science Center (WZB Berlin) and hold a Ph.D. Degree in Political Science from Columbia University. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research broadly focuses on government incentives for fiscal and political decentralization and the role of state-owned media in framing responsibility across government hierarchy. In addition, I am interested in experimental evaluation of the political and economic effects of introducing new information communication technologies (ICTs) and using them to improve citizen-government communication. I study these questions predominantly in Post-Soviet Countries.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Methodologically I rely on a mixture of experimental methods as well as Bayesian statistics. In my work, I pay special attention to research transparency and over the years, contributed to several `R` packages: `CausalQueries`, `DeclareDesign`, and `hiddenmeta`.
+
+Previously I was a research fellow at the [J-PAL Global](https://www.poverty-action.org/people/georgiy-syunyaev) and the [International Center for Studies for the Study of Institutions and Development at HSE University](https://iims.hse.ru/en/csid/), as well as visiting scholar at the [Harriman Institute for Russian, Eurasian, and East European Studies](https://harriman.columbia.edu/), and the [World Bank's Development Group](https://www.worldbank.org/en/about/unit/unit-dec#4).
+
+You can download my CV [here](https://raw.githubusercontent.com/gerasy1987/Awesome-CV/master/examples/cv.pdf).

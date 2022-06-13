@@ -11,7 +11,7 @@ nav_order: 2
 <div class="publications">
 
 <h1>Dissertation</h1>
-<hr>
+
 {% bibliography -f papers -q @phdthesis %}
 
 <h1>Published papers</h1>
@@ -22,11 +22,11 @@ nav_order: 2
 {% endfor %}
 
 <h1>Working papers</h1>
-<hr>
+
 {% bibliography -f papers -q @unpublished[pdf]* %}
 
 <h1>Work in Progress</h1>
-<hr>
+
 {% bibliography -f papers -q @misc* %}
 
 

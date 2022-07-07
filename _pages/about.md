@@ -23,4 +23,4 @@ Methodologically I rely on a mixture of experimental methods as well as Bayesian
 
 Previously I was a research fellow at the [J-PAL Global](https://www.poverty-action.org/people/georgiy-syunyaev) and the [International Center for Studies for the Study of Institutions and Development at HSE University](https://iims.hse.ru/en/csid/), as well as visiting scholar at the [Harriman Institute for Russian, Eurasian, and East European Studies](https://harriman.columbia.edu/), and the [World Bank's Development Group](https://www.worldbank.org/en/about/unit/unit-dec#4).
 
-You can download my CV [here](https://raw.githubusercontent.com/gerasy1987/Awesome-CV/master/examples/cv.pdf).
+You can download my CV [here](https://www.dropbox.com/s/82brostjs7f58i3/syunyaev_CV.pdf?dl=0).

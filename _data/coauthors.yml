@@ -1,11 +1,58 @@
 "Wilke":
-  - firstname: ["Anna M", "Anna M Wilke", "Anna Wilke", "A.W.", "A. W.", "Wilke", "AW"]
+  - firstname: ["Anna M", "Anna", "A.M.", "A. M.", "AM", "A.", "A"]
     url: https://anna-wilke.com/
 
 "Leavitt":
-  - firstname: ["Thomas", "Thomas Leavitt", "Leavitt", "T.L.", "TL", "T. L."]
+  - firstname: ["Thomas", "T", "T."]
     url: https://www.tomleavitt.com/
 
 "Shirikov":
-  - firstname: ["Anton", "Anton Shirikov", "A.S.", "AS", "A. S."]
+  - firstname: ["Anton", "A.", "A"]
     url: https://www.shirikov.com/
+
+"Tietz":
+  - firstname: ["Till", "T.", "T"]
+    url: https://github.com/till-tietz
+
+"Humphreys":
+  - firstname: ["Macartan", "M.", "M"]
+    url: http://macartan.nyc/
+
+"McMurry":
+  - firstname: ["Nina", "N.", "N"]
+    url: https://www.ninamcmurry.com/
+
+"Stukal":
+  - firstname: ["Denis", "D.", "D"]
+    url: https://www.hse.ru/en/staff/stukal
+
+"Rozenas":
+  - firstname: ["Arturas", "A.", "A"]
+    url: http://www.arozenas.net/
+
+"Gans-Morse":
+  - firstname: ["Jordan", "J.", "J"]
+    url: https://sites.northwestern.edu/jgansmorse/
+
+"Frye":
+  - firstname: ["Timothy", "Timothy M", "T", "T.", "TM", "T.M.", "T. M."]
+    url: https://www.timothyfrye.com/
+
+"Ting":
+  - firstname: ["Michael", "Michael M", "M", "M.", "MM", "M.M.", "M. M."]
+    url: http://www.columbia.edu/~mmt2033/Michael_Tings_Columbia_website/Welcome.html
+
+"Polishchuk":
+  - firstname: ["Leonid", "L", "L."]
+    url: https://www.hse.ru/en/org/persons/65104
+
+"Scacco":
+  - firstname: ["Alexandra", "A", "A."]
+    url: https://www.wzb.eu/en/persons/alexandra-scacco
+
+"Rochlitz":
+  - firstname: ["Michael", "M", "M."]
+    url: https://sites.google.com/site/michaelrochlitz/
+
+
+

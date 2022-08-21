@@ -54,5 +54,25 @@
   - firstname: ["Michael", "M", "M."]
     url: https://sites.google.com/site/michaelrochlitz/
 
+"Laughlin":
+  - firstname: ["Benjamin", "B", "B."]
+    url: http://www.benjamin-laughlin.com/
+
+"Malkov":
+  - firstname: ["Egor", "E", "E."]
+    url: https://sites.google.com/a/umn.edu/emalkov
+
+"Warren":
+  - firstname: ["Shana", "Shana S", "S.S.", "S", "S."]
+    url: https://www.poverty-action.org/people/shana-warren
+
+"Meriggi":
+  - firstname: ["Niccolò", "Niccolò F", "N.F.", "N", "N."]
+    url: https://research.wur.nl/en/persons/niccol%C3%B2-meriggi
+
+"Voors":
+  - firstname: ["Maarten", "M", "M."]
+    url: https://sites.google.com/site/maartenvoors/
+
 
 

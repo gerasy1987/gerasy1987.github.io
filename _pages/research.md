@@ -10,6 +10,10 @@ nav_order: 2
 <!-- _pages/research.md -->
 <div class="publications">
 
+<h1>Job market paper</h1>
+
+{% bibliography -f papers -q @unpublished[status=jmp]* %}
+
 <h1>Dissertation</h1>
 
 {% bibliography -f papers -q @phdthesis %}
@@ -27,11 +31,11 @@ nav_order: 2
 
 <h1>Working papers</h1>
 
-{% bibliography -f papers -q @unpublished[pdf]* %}
+{% bibliography -f papers -q @unpublished[status!=jmp]* %}
 
 <h1>Work in Progress</h1>
 
-{% bibliography -f papers -q @misc* %}
+{% bibliography -f papers -q @misc %}
 
 
 </div>

@@ -74,5 +74,24 @@
   - firstname: ["Maarten", "M", "M."]
     url: https://sites.google.com/site/maartenvoors/
 
+"Medina":
+  - firstname: ["Lily", "L", "L."]
+    url: https://lilymedina.github.io/
+
+"Blair":
+  - firstname: ["Graeme", "G", "G."]
+    url: https://graemeblair.com/
+
+"Cooper":
+  - firstname: ["Jasper", "Jasper J", "J.", "J", "J.J."]
+    url: https://www.linkedin.com/in/jasper-jack-cooper/
+
+"Coppock":
+  - firstname: ["Alexander", "A", "A."]
+    url: https://alexandercoppock.com/
+
+"Jacobs":
+  - firstname: ["Alan", "A", "A."]
+    url: https://politics.ubc.ca/persons/alan-jacobs/
 
 

@@ -74,7 +74,7 @@ nav_order: 4
 
 <div class="card mt-3">
 <div class="p-3">
-<strong>Institutional Economics I</strong> (Instructor: <a href="https://www.hse.ru/en/staff/yudkevich">Professor Maria Yudkevich</a>)<br>
+<strong>Institutional Economics I</strong> (Instructor: <a href="https://www.hse.ru/en/staff/yudkevich">Prof. Maria Yudkevich</a>)<br>
 <em>Spring 2012: TA</em>
 <ul>
     <li>Responsible for three 1-hour sections each week and grading</li>

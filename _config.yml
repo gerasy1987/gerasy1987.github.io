@@ -69,6 +69,7 @@ keybase_username: # your keybase user name
 wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
 stackoverflow_id: #your stackoverflow id
+mastodon: mstdn.social/@gerasy #your mastodon address
 
 contact_note: > 
   Reichpietschufer 50, D-10785 Berlin, Germany

@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-05-14 07:59:00-0400
+date: 2022-03-14 07:59:00-0400
 inline: true
 ---
 
-💻📑 Our package with Macartan Humphreys and Till Tietz, `hiddenmeta`, for diagnosis and meta-analysis of hard-to-reach population studies is now available [here](https://gsyunyaev.com/hiddenmeta/) and on GitHub in beta version
+🇺🇦 __Stop the War in Ukraine!__ As part of community of Russian-speaking economists I declare strong protest against the war launched on February 24, 2022 by the Russian authorities against Ukraine. We demand an immediate cessation of hostilities and the withdrawal of Russian troops from Ukraine. Full statement [here](https://sites.google.com/view/netvoine-en)

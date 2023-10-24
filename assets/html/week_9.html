@@ -1251,22 +1251,22 @@ Georgiy Syunyaev
   <p class="date">October 24, 2023</p>
 </section>
 <section id="plan" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">3-Page Proposal</h2>
+<h2 data-id="quarto-animate-title">Plan for this week</h2>
 <p><br><br></p>
 <ol type="1">
 <li><p>3-Page Proposal and OSF</p></li>
 <li><p>Hypothesis testing</p></li>
-<li><p>False positives vs False Negatives</p></li>
+<li><p>Discussion of two papers</p></li>
 </ol>
 </section>
 <section>
-<section id="page-proposal-and-osf" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">3-Page Proposal and OSF</h1>
+<section id="page-proposal" class="title-slide slide level1 center">
+<h1>3-Page Proposal</h1>
 
 </section>
-<section id="page-proposal" class="slide level2">
+<section id="page-proposal-1" class="slide level2">
 <h2>3-Page Proposal</h2>
-<p><br><br></p>
+<p><br><br><br></p>
 <ul>
 <li><p><span style="color: #98971a;"><strong>Due:</strong></span> Next Tuesday before class</p></li>
 <li><p><span style="color: #98971a;"><strong>Aim:</strong></span> Brief description of your project that follows final write-up structure</p></li>
@@ -1286,6 +1286,11 @@ Georgiy Syunyaev
 <li class="fragment"><p><span style="color: #98971a;"><strong>Measurement:</strong></span> 1-2 paragraphs</p></li>
 <li class="fragment"><p><span style="color: #98971a;"><strong>Possible Issues:</strong></span> 1-3 paragraphs</p></li>
 </ol>
+</div>
+<div class="fragment">
+<ul>
+<li>Final project includes more details on everything + estimation procedures with <code>R</code> code if applicable</li>
+</ul>
 </div>
 </section>
 <section id="reviewing-literature" class="slide level2">
@@ -1374,7 +1379,7 @@ Georgiy Syunyaev
 </section>
 <section id="open-science-framework" class="slide level2">
 <h2>Open Science Framework</h2>
-<p><br></p>
+<p><br><br></p>
 <ul>
 <li><p>Resource for storing research information</p></li>
 <li><p>Each project is stored in a repository with version control</p></li>
@@ -1390,11 +1395,12 @@ Georgiy Syunyaev
 <section id="statistical-hypothesis-testing" class="slide level2">
 <h2>Statistical hypothesis testing</h2>
 <ul>
-<li><p>Statistical hypothesis testing is a thought experiment.</p></li>
+<li><p>Statistical hypothesis testing is a thought experiment</p></li>
 <li><p><span style="color: #98971a;"><strong>What would the world look like if we knew the truth?</strong></span></p>
 <div class="small-font">
 <ul>
 <li>Average treatment effect is <span class="math inline">\(0\)</span></li>
+<li>Each individual effect is <span class="math inline">\(0\)</span></li>
 <li>Sample mean is equal to <span class="math inline">\(X\)</span></li>
 <li>etc.</li>
 </ul>
@@ -1434,9 +1440,9 @@ Georgiy Syunyaev
 <li><p><span style="color: #98971a;"><strong>Null hypothesis:</strong></span> Some statement about the population parameters.</p>
 <div class="small-font">
 <ul>
-<li>The “devil’s advocate” hypothesis <span class="math inline">\(\Rightarrow\)</span> assumes what you seek to prove wrong.</li>
-<li>Ex: Biden’s approval is the same as election result.</li>
-<li>Ex: Treatment effect is zero for everyone.</li>
+<li>The “devil’s advocate” hypothesis <span class="math inline">\(\Rightarrow\)</span> assumes what you seek to prove wrong</li>
+<li>Ex: Biden’s approval is the same as election result</li>
+<li>Ex: Treatment effect is zero for everyone</li>
 <li>Denoted <span class="math inline">\(H_0\)</span></li>
 </ul>
 </div></li>
@@ -1446,9 +1452,9 @@ Georgiy Syunyaev
 <li><p><span style="color: #98971a;"><strong>Alternative hypothesis:</strong></span> The statement we hope or suspect is true instead of <span class="math inline">\(H_0\)</span>.</p>
 <div class="small-font">
 <ul>
-<li>It is the opposite of the null hypothesis.</li>
-<li>Ex: Biden’s approval fell by 2%.</li>
-<li>Ex: Treatment effect is different from zero (positive or negative).</li>
+<li>It is the opposite of the null hypothesis</li>
+<li>Ex: Biden’s approval fell by 2%</li>
+<li>Ex: Treatment effect is different from zero (positive or negative)</li>
 <li>Denoted <span class="math inline">\(H_1\)</span> or <span class="math inline">\(H_a\)</span></li>
 </ul>
 </div></li>
@@ -1467,8 +1473,8 @@ Georgiy Syunyaev
 <li><p><span style="color: #98971a;"><strong>Parameter:</strong></span> Average Treatment Effect (ATE) <span class="math inline">\(\mu_T − \mu_C\)</span> of encouragement on support for government policies</p>
 <div class="small-font">
 <ul>
-<li><span class="math inline">\(\mu_T\)</span>: Average support for government policies if everyone received encouragement.</li>
-<li><span class="math inline">\(\mu_T\)</span>: Average support for government policies if no one received encouragement.</li>
+<li><span class="math inline">\(\mu_T\)</span>: Average support for government policies if everyone received encouragement</li>
+<li><span class="math inline">\(\mu_T\)</span>: Average support for government policies if no one received encouragement</li>
 </ul>
 </div></li>
 </ul>
@@ -1499,9 +1505,9 @@ Georgiy Syunyaev
 <h2><span class="math inline">\(P\)</span>-value</h2>
 <p><br><br></p>
 <ul>
-<li><p><span style="color: #98971a;"><span class="math inline">\(p\)</span>-value (based on a two-sided test):</span> Probability of getting an (absolute) difference in means this big (or bigger) <strong>if the null hypothesis were true</strong></p>
+<li><p><span style="color: #98971a;"><strong><span class="math inline">\(p\)</span>-value (based on a two-sided test):</strong></span> Probability of getting an (absolute) difference in means this big (or bigger) <strong>if the null hypothesis were true</strong></p>
 <ul>
-<li>Lower <span class="math inline">\(p\)</span>-values <span class="math inline">\(\Rightarrow\)</span> stronger evidence against the null.</li>
+<li>Lower <span class="math inline">\(p\)</span>-values <span class="math inline">\(\Rightarrow\)</span> stronger evidence against the null</li>
 </ul></li>
 <li><p>Intuition: How likely are we to observe what we observe if the null hypothesis is true?</p></li>
 </ul>
@@ -1510,7 +1516,7 @@ Georgiy Syunyaev
 <li><p><strong>Conclusion:</strong> We either reject (if <span class="math inline">\(p\)</span>-value is small) or fail to reject (if <span class="math inline">\(p\)</span>-value is large) the null</p>
 <div class="small-font">
 <ul>
-<li>We never accept anything since the statement is (more on this next time)</li>
+<li>We never accept anything since the statement is probabilistic (more on this next time)</li>
 </ul>
 </div></li>
 </ul>
@@ -1775,7 +1781,7 @@ Georgiy Syunyaev
 <span id="cb3-14"><a href="#cb3-14"></a></span>
 <span id="cb3-15"><a href="#cb3-15"></a><span class="fu">mean</span>(<span class="fu">abs</span>(dim_simulated) <span class="sc">&gt;=</span> <span class="fu">abs</span>(dim_observed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.71</code></pre>
+<pre><code>[1] 0.727</code></pre>
 </div>
 </div>
 </div>
@@ -1784,11 +1790,6 @@ Georgiy Syunyaev
 </section>
 <section id="section" class="slide level2" data-background-iframe="https://gerasy.shinyapps.io/hypothesis_testing_dim/" data-background-interactive="true">
 <h2></h2>
-</section></section>
-<section>
-<section id="false-positives-vs-false-negatives" class="title-slide slide level1 center">
-<h1>False positives vs False Negatives</h1>
-
 </section>
 <section id="testing-errors" class="slide level2">
 <h2>Testing errors</h2>
@@ -1828,8 +1829,8 @@ Georgiy Syunyaev
 </table>
 <div class="small-font">
 <ul>
-<li>Type I error (<span style="color: #98971a;"><strong>False positive</strong></span>) is the worst (like convicting an innocent null hypothesis)</li>
-<li>Type II error (<span style="color: #98971a;"><strong>False negative</strong></span>) is less serious (missed out on an awesome finding)</li>
+<li>Type I error (<span style="color: #98971a;"><strong>False positive</strong></span>) is the worst: Like convicting an innocent</li>
+<li>Type II error (<span style="color: #98971a;"><strong>False negative</strong></span>) is less serious: Missed out on an awesome finding</li>
 </ul>
 </div>
 </div>

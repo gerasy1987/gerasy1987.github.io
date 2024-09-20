@@ -21,10 +21,6 @@ nav_order: 2
 
 {% bibliography -f papers -q @inproceedings %}
 
-<h1>Dissertation</h1>
-
-{% bibliography -f papers -q @phdthesis %}
-
 <h1>Working papers</h1>
 
 {% bibliography -f papers -q @unpublished[status=jmp]* %}

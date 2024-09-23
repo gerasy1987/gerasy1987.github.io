@@ -23,4 +23,4 @@ Beyond my substantive interests, I work on knowledge accumulation methods in soc
 
 Previously I was a post-doctoral fellow at the [Institutions and Political Inequality Unit](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality) at Berlin Social Science Center (WZB Berlin), and a research fellow at the [J-PAL Global](https://www.poverty-action.org/people/georgiy-syunyaev) and the [International Center for Studies for the Study of Institutions and Development at HSE University](https://iims.hse.ru/en/csid/), as well as visiting scholar at the [Harriman Institute for Russian, Eurasian, and East European Studies](https://harriman.columbia.edu/), and the [World Bank's Development Group](https://www.worldbank.org/en/about/unit/unit-dec#4).
 
-You can download my CV [here](https://www.dropbox.com/s/82brostjs7f58i3/syunyaev_CV.pdf?dl=0).
+You can download my CV [here](https://www.dropbox.com/scl/fi/j6k9bgzqhaluaezbjm30e/syunyaev_cv.pdf?rlkey=1g3geyslqtt54i44osur7etmu&st=31ou5uw3&dl=0).

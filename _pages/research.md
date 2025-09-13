@@ -3,7 +3,7 @@ layout: page
 permalink: /research/
 title: research
 description: published papers, working papers, and work in progress
-years: [2021,2015,2014]
+years: [2025,2021,2015,2014]
 nav: true
 nav_order: 2
 ---
@@ -30,6 +30,5 @@ nav_order: 2
 <h1>Work in Progress</h1>
 
 {% bibliography -f papers -q @misc %}
-
 
 </div>

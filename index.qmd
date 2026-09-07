@@ -1,0 +1,71 @@
+---
+pagetitle: "Georgiy Syunyaev"
+---
+
+```{=html}
+<header class="profile-header">
+  <div class="profile-intro">
+    <h1>Georgiy Syunyaev</h1>
+    <p class="title">
+      Assistant Professor<br>
+      Department of Political Science<br>
+      <a href="https://as.vanderbilt.edu/political-science/">Vanderbilt University</a><br>
+      <a href="mailto:g.syunyaev@vanderbilt.edu">g.syunyaev@vanderbilt.edu</a>
+    </p>
+    <p class="profile-links">
+      <a href="cv/syunyaev_cv.pdf">CV</a>
+      <span class="separator">|</span>
+      <a href="https://scholar.google.com/citations?user=QeJSq9YAAAAJ">Google Scholar</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/gerasy1987">GitHub</a>
+      <span class="separator">|</span>
+      <a href="https://orcid.org/0000-0002-4391-6313">ORCID</a>
+      <span class="separator">|</span>
+      <a href="teaching.html">Teaching</a>
+    </p>
+  </div>
+  <img class="headshot" src="assets/img/profile_pic_web.jpg" alt="Georgiy Syunyaev">
+</header>
+```
+
+I am an assistant professor at the [Department of Political Science at Vanderbilt University](https://as.vanderbilt.edu/political-science/). I hold a Ph.D. in Political Science from Columbia University.
+
+In my research, I rely on survey and field experimental methods, formal theory, and qualitative work to study how citizens in autocratic regimes react to media exposure and how autocrats make policy decisions, with a particular focus on decentralization. While my work is relevant for many authoritarian and weak democratic contexts, it is motivated by my interest in understanding the role of propaganda in regime survival in Russia and other post-Soviet countries.
+
+Beyond my substantive interests, I work on knowledge accumulation methods in the social sciences. I pay special attention to research transparency and, over the years, have contributed to several `R` packages: `CausalQueries`, `DeclareDesign`, and `hiddenmeta`.
+
+Previously I was a post-doctoral fellow at the [Institutions and Political Inequality Unit](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality) at the Berlin Social Science Center (WZB), a research fellow at [J-PAL Global](https://www.poverty-action.org/people/georgiy-syunyaev) and the [International Center for the Study of Institutions and Development at HSE University](https://iims.hse.ru/en/csid/), and a visiting scholar at the [Harriman Institute](https://harriman.columbia.edu/) and the [World Bank's Development Research Group](https://www.worldbank.org/en/about/unit/unit-dec#4).
+
+```{r}
+#| include: false
+source("R/pubs.R")
+pubs <- load_pubs()
+```
+
+## Publications
+
+```{r}
+#| output: asis
+pub_list(pubs$published, pubs)
+```
+
+## Working Papers
+
+```{r}
+#| output: asis
+pub_list(pubs$working, pubs)
+```
+
+## Work in Progress
+
+```{r}
+#| output: asis
+pub_list(pubs$inprogress, pubs)
+```
+
+## Software
+
+```{r}
+#| output: asis
+pub_list(pubs$software, pubs)
+```

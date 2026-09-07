@@ -1,0 +1,12 @@
+<script>
+  // Show or hide the [Abstract] and [BibTeX] blocks under publication entries.
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest('a.toggle');
+    if (!a) return;
+    ev.preventDefault();
+    var el = document.getElementById(a.getAttribute('data-target'));
+    if (!el) return;
+    el.hidden = !el.hidden;
+    a.setAttribute('aria-expanded', el.hidden ? 'false' : 'true');
+  });
+</script>

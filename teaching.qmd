@@ -1,0 +1,31 @@
+---
+pagetitle: "Teaching · Georgiy Syunyaev"
+---
+
+```{=html}
+<p class="site-nav"><a href="index.html">← Georgiy Syunyaev</a></p>
+```
+
+# Teaching
+
+## Columbia University
+
+- **Experimental Research** (Instructor: [Prof. Donald P. Green](https://polisci.columbia.edu/content/donald-p-green)). Fall 2019 and Fall 2020, teaching assistant.
+  <div>Advised 18 undergraduate students on the design, IRB application, implementation, and analysis of individual experimental projects.</div>
+
+- **Chinese Foreign Policy** (Instructor: [Prof. Andrew J. Nathan](https://polisci.columbia.edu/content/andrew-j-nathan)). Spring 2017, teaching assistant.
+  <div>Responsible for two one-hour sections per week.</div>
+
+- **Design and Analysis of Sample Surveys** (Instructor: [Prof. Andrew Gelman](http://www.stat.columbia.edu/~gelman/)). Spring 2016, teaching assistant.
+  <div>Responsible for two-hour bi-weekly sections and grading.</div>
+
+## HSE University
+
+- **Economics of Reform** (Instructor: [Prof. Leonid Polishchuk](https://www.hse.ru/en/org/persons/65104)). Fall 2011 and Fall 2013, teaching assistant.
+  <div>Responsible for weekly two-hour sections and grading.</div>
+
+- **New Political Economy** (Instructor: [Prof. Leonid Polishchuk](https://www.hse.ru/en/org/persons/65104)). Fall 2012, teaching assistant and guest lecturer.
+  <div>Responsible for weekly two-hour sections and grading.</div>
+
+- **Institutional Economics I** (Instructor: [Prof. Maria Yudkevich](https://www.hse.ru/en/staff/yudkevich)). Spring 2012, teaching assistant.
+  <div>Responsible for three one-hour sections each week and grading.</div>

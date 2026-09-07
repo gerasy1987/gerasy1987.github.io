@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - teaching.qmd
+    - 404.qmd
+  resources:
+    - assets/**
+    - cv/**
+    - CNAME
+    - .nojekyll
+    - robots.txt
+
+website:
+  title: "Georgiy Syunyaev"
+  site-url: https://gsyunyaev.com
+  description: "Georgiy Syunyaev, Assistant Professor of Political Science at Vanderbilt University. Propaganda, media, and politics in autocracies."
+  favicon: assets/img/favicon.png
+  google-analytics: "G-3DSHY26B52"
+  search: false
+
+format:
+  html:
+    minimal: true
+    css: styles.css
+    include-in-header: _includes/quarto-head.html
+    lang: en
+    toc: false
+    anchor-sections: false
+
+execute:
+  echo: false
+  warning: false
+  message: false

@@ -1,0 +1,11 @@
+---
+pagetitle: "Page not found · Georgiy Syunyaev"
+---
+
+```{=html}
+<p class="site-nav"><a href="/">← Georgiy Syunyaev</a></p>
+```
+
+# Page not found
+
+The page you asked for does not exist. Go back to the [home page](/).

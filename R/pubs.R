@@ -190,6 +190,7 @@ title_url <- function(e) {
   if (is.null(u) && !is.null(e$doi)) {
     u <- if (grepl("://", e$doi, fixed = TRUE)) e$doi else paste0("https://doi.org/", e$doi)
   }
+  if (is.null(u) && !is.null(e$preprint)) u <- e$preprint
   if (is.null(u) && !is.null(e$pdf)) u <- asset_url(e$pdf, PDF_DIR)
   if (is.null(u) && !is.null(e$code)) u <- e$code
   u

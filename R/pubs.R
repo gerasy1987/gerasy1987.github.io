@@ -4,6 +4,18 @@
 # Sourced from index.qmd at render time. See README.md for the bib fields
 # the site understands and how entries are sorted into sections.
 
+for (pkg in c("RefManageR", "yaml")) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    stop(sprintf(
+      paste0(
+        "Package '%s' is not installed in the R that Quarto is using (%s).\n",
+        "Install it there with:  %s/bin/Rscript -e 'install.packages(\"%s\")'\n",
+        "Run `quarto check` to see which R Quarto picks up."
+      ),
+      pkg, R.home(), R.home(), pkg
+    ), call. = FALSE)
+  }
+}
 suppressPackageStartupMessages({
   library(RefManageR)
   library(yaml)

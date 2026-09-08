@@ -292,13 +292,12 @@ fmt_entry <- function(e, pubs) {
   venue   <- fmt_venue(e)
   links   <- fmt_links(e, key)
 
-  head_parts <- c(title_html, authors, venue, links)
-  head_parts <- head_parts[nzchar(head_parts)]
-  head <- paste(head_parts, collapse = " ")
-  if (nzchar(authors) && nzchar(venue)) {
-    # "(with A and B). 2021. <i>Journal</i>..." reads better with a period after the authors.
-    head <- sub(paste0(authors, " "), paste0(authors, ". "), head, fixed = TRUE)
-  }
+  # "<b>Title</b> (with A and B). 2021. <i>Journal</i>, ... [links]"; the period
+  # after the title or author list separates it from the venue line.
+  head <- title_html
+  if (nzchar(authors)) head <- paste(head, authors)
+  if (nzchar(venue))   head <- paste0(head, ". ", venue)
+  if (nzchar(links))   head <- paste(head, links)
 
   blocks <- character(0)
   if (!is.null(e$abstract)) {

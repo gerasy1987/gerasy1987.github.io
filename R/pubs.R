@@ -71,9 +71,12 @@ load_pubs <- function(bib_file = BIB_FILE, coauthors_file = COAUTHORS_FILE) {
   # Newest first; ties keep the order in the bib file.
   published <- published[order(-pub_years, seq_along(published), na.last = TRUE)]
 
+  # status = wp puts an unpublished/misc entry under Working Papers; any other
+  # status (design, implementation, analysis, manuscript, ...) puts it under
+  # Work in Progress. The note field carries the stage text that is displayed.
   is_paper   <- types %in% c("unpublished", "misc", "techreport")
-  working    <- entries[is_paper & status != "implementation"]
-  inprogress <- entries[is_paper & status == "implementation"]
+  working    <- entries[is_paper & status == "wp"]
+  inprogress <- entries[is_paper & status != "wp"]
   software   <- entries[types == "manual"]
 
   list(
@@ -197,13 +200,32 @@ toggle <- function(label, id) {
   sprintf('<a href="#" class="toggle" data-target="%s" role="button" aria-expanded="false" aria-controls="%s">[%s]</a>', id, id, label)
 }
 
+# pap = {https://...}                       -> [Pre-analysis plan]
+# pap = {https://...; https://...}          -> [Pre-analysis plan 1] [Pre-analysis plan 2]
+# pap = {Survey|https://...; GOTV|https://...} -> [Pre-analysis plan: Survey] [Pre-analysis plan: GOTV]
+pap_links <- function(pap) {
+  items <- trimws(strsplit(pap, ";", fixed = TRUE)[[1]])
+  items <- items[nzchar(items)]
+  if (length(items) == 1 && !grepl("|", items, fixed = TRUE)) {
+    return(link("Pre-analysis plan", items))
+  }
+  vapply(seq_along(items), function(i) {
+    parts <- trimws(strsplit(items[i], "|", fixed = TRUE)[[1]])
+    if (length(parts) >= 2) {
+      link(paste0("Pre-analysis plan: ", html_escape(parts[1])), parts[2])
+    } else {
+      link(paste("Pre-analysis plan", i), parts[1])
+    }
+  }, character(1))
+}
+
 fmt_links <- function(e, key) {
   out <- character(0)
   if (!is.null(e$abstract)) out <- c(out, toggle("Abstract", paste0("abs-", key)))
   if (!is.null(e$preprint)) out <- c(out, link("Preprint", e$preprint))
   if (!is.null(e$pdf))      out <- c(out, link("PDF", asset_url(e$pdf, PDF_DIR)))
   if (!is.null(e$supp))     out <- c(out, link("Supplement", asset_url(e$supp, PDF_DIR)))
-  if (!is.null(e$pap))      out <- c(out, link("Pre-analysis plan", e$pap))
+  if (!is.null(e$pap))      out <- c(out, pap_links(e$pap))
   if (!is.null(e$code))     out <- c(out, link("Code", e$code))
   if (!is.null(e$slides))   out <- c(out, link("Slides", asset_url(e$slides, PDF_DIR)))
   if (!is.null(e$poster))   out <- c(out, link("Poster", asset_url(e$poster, PDF_DIR)))

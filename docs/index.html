@@ -51,6 +51,31 @@ gtag('config', 'G-3DSHY26B52', { 'anonymize_ip': true});
     el.hidden = !el.hidden;
     a.setAttribute('aria-expanded', el.hidden ? 'false' : 'true');
   });
+
+  // Size the headshot to the exact height of the text block next to it
+  // (name through the links line). On narrow screens the header stacks and
+  // the stylesheet's fixed size is used instead.
+  document.addEventListener('DOMContentLoaded', function () {
+    var img = document.querySelector('.profile-header .headshot');
+    var intro = document.querySelector('.profile-header .profile-intro');
+    if (!img || !intro) return;
+    var stacked = window.matchMedia('(max-width: 640px)');
+    function fit() {
+      if (stacked.matches) {
+        img.style.width = '';
+        img.style.height = '';
+        return;
+      }
+      var h = Math.round(intro.getBoundingClientRect().height);
+      if (h > 0) {
+        img.style.width = h + 'px';
+        img.style.height = h + 'px';
+      }
+    }
+    fit();
+    if (window.ResizeObserver) new ResizeObserver(fit).observe(intro);
+    window.addEventListener('resize', fit);
+  });
 </script>
 
 
@@ -64,6 +89,7 @@ gtag('config', 'G-3DSHY26B52', { 'anonymize_ip': true});
 
 
 <header class="profile-header">
+  <img class="headshot" src="assets/img/profile_pic_web.jpg" alt="Georgiy Syunyaev">
   <div class="profile-intro">
     <h1>Georgiy Syunyaev</h1>
     <p class="title">
@@ -81,10 +107,9 @@ gtag('config', 'G-3DSHY26B52', { 'anonymize_ip': true});
       <span class="separator">|</span>
       <a href="https://orcid.org/0000-0002-4391-6313">ORCID</a>
       <span class="separator">|</span>
-      <a href="teaching.html">Teaching</a>
+      <a href="https://as.vanderbilt.edu/political-science/bio/georgiy-syunyaev/">Faculty Page</a>
     </p>
   </div>
-  <img class="headshot" src="assets/img/profile_pic_web.jpg" alt="Georgiy Syunyaev">
 </header>
 <p>I am an assistant professor at the <a href="https://as.vanderbilt.edu/political-science/">Department of Political Science at Vanderbilt University</a>. I hold a Ph.D.&nbsp;in Political Science from Columbia University.</p>
 <p>In my research, I rely on survey and field experimental methods, formal theory, and qualitative work to study how citizens in autocratic regimes react to media exposure and how autocrats make policy decisions, with a particular focus on decentralization. While my work is relevant for many authoritarian and weak democratic contexts, it is motivated by my interest in understanding the role of propaganda in regime survival in Russia and other post-Soviet countries.</p>

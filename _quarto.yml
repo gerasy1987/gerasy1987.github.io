@@ -3,7 +3,6 @@ project:
   output-dir: docs
   render:
     - index.qmd
-    - teaching.qmd
     - 404.qmd
   resources:
     - assets/**

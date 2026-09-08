@@ -51,6 +51,31 @@ gtag('config', 'G-3DSHY26B52', { 'anonymize_ip': true});
     el.hidden = !el.hidden;
     a.setAttribute('aria-expanded', el.hidden ? 'false' : 'true');
   });
+
+  // Size the headshot to the exact height of the text block next to it
+  // (name through the links line). On narrow screens the header stacks and
+  // the stylesheet's fixed size is used instead.
+  document.addEventListener('DOMContentLoaded', function () {
+    var img = document.querySelector('.profile-header .headshot');
+    var intro = document.querySelector('.profile-header .profile-intro');
+    if (!img || !intro) return;
+    var stacked = window.matchMedia('(max-width: 640px)');
+    function fit() {
+      if (stacked.matches) {
+        img.style.width = '';
+        img.style.height = '';
+        return;
+      }
+      var h = Math.round(intro.getBoundingClientRect().height);
+      if (h > 0) {
+        img.style.width = h + 'px';
+        img.style.height = h + 'px';
+      }
+    }
+    fit();
+    if (window.ResizeObserver) new ResizeObserver(fit).observe(intro);
+    window.addEventListener('resize', fit);
+  });
 </script>
 
 

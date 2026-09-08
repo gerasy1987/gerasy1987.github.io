@@ -1,29 +1,47 @@
-/* gsyunyaev.com — single stylesheet for the whole site. */
+/* gsyunyaev.com — single stylesheet for the whole site.
+ *
+ * Palette: Gruvbox dark. To switch to Monokai Pro, replace the variable
+ * values in :root with the ones in the comment block below it.
+ */
 
 :root {
-  --text: #222;
-  --muted: #666;
-  --link: #3498db;
-  --border: #d8d8d8;
+  color-scheme: dark;
+  --bg: #282828;        /* page background */
+  --bg-code: #1d2021;   /* code and BibTeX blocks */
+  --text: #ebdbb2;      /* body text */
+  --heading: #fbf1c7;   /* name and section headings */
+  --muted: #a89984;     /* title block, media line */
+  --link: #83a598;      /* links and paper titles */
+  --border: #504945;    /* section rules, code borders */
+  --selection: #504945; /* text selection */
 }
+
+/* Monokai Pro alternative:
+ *   --bg: #2d2a2e;  --bg-code: #221f22;  --text: #fcfcfa;  --heading: #fcfcfa;
+ *   --muted: #939293;  --link: #78dce8;  --border: #5b595c;  --selection: #5b595c;
+ */
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  background: #fff;
+  background: var(--bg);
 }
 
 body {
   max-width: 800px;
   margin: 0 auto;
   padding: 36px 20px 56px;
-  background: #fff;
+  background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.55;
+}
+
+::selection {
+  background: var(--selection);
 }
 
 a {
@@ -44,7 +62,7 @@ a:focus {
 h1,
 h2,
 h3 {
-  color: #111;
+  color: var(--heading);
   font-weight: 650;
   line-height: 1.2;
 }
@@ -88,6 +106,12 @@ li {
 b,
 strong {
   font-weight: 650;
+  color: var(--heading);
+}
+
+b a,
+strong a {
+  color: var(--link);
 }
 
 small,
@@ -102,11 +126,24 @@ pre {
   font-size: 0.9em;
 }
 
+code {
+  color: var(--heading);
+  background: var(--bg-code);
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+}
+
 pre {
   overflow-x: auto;
   padding: 0.8rem;
+  background: var(--bg-code);
   border: 1px solid var(--border);
   white-space: pre;
+}
+
+pre code {
+  padding: 0;
+  background: none;
 }
 
 img {
@@ -114,18 +151,28 @@ img {
   height: auto;
 }
 
-/* Header block: text on the left, headshot on the right. */
+/* Header block: headshot on the left, text on the right. The script in
+ * _includes/quarto-head.html resizes the headshot to the exact height of
+ * the text block; the width and height here are the no-script fallback. */
 
 .profile-header {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
+.headshot {
+  flex: 0 0 auto;
+  width: 182px;
+  height: 182px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .profile-intro {
   flex: 1 1 auto;
+  min-width: 0;
 }
 
 .profile-intro .title {
@@ -138,6 +185,7 @@ img {
   flex-wrap: wrap;
   gap: 0.25rem 0.45rem;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .profile-links a {
@@ -148,15 +196,7 @@ img {
   color: var(--muted);
 }
 
-.headshot {
-  flex: 0 0 auto;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Small pages (teaching, 404): a one-line way back home. */
+/* Small pages (404): a one-line way back home. */
 
 .site-nav {
   margin-bottom: 1.5rem;
@@ -169,17 +209,13 @@ ul.pubs li {
   margin-bottom: 0.9rem;
 }
 
-.pub-links {
-  white-space: normal;
-}
-
 .pub-links a {
   font-style: italic;
 }
 
 .toggle-body {
   margin-top: 0.55rem;
-  color: #333;
+  color: var(--text);
 }
 
 .toggle-body pre {
@@ -208,6 +244,20 @@ footer {
   font-size: 0.9em;
 }
 
+/* Narrow screens: headshot above the text at a fixed size. */
+
+@media (max-width: 640px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headshot {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 @media (max-width: 560px) {
   body {
     padding: 24px 16px 42px;
@@ -216,16 +266,6 @@ footer {
 
   h1 {
     font-size: 1.8rem;
-  }
-
-  .profile-header {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-
-  .headshot {
-    width: 120px;
-    height: 120px;
   }
 
   .profile-links {
@@ -238,12 +278,19 @@ footer {
 }
 
 @media print {
-  body {
-    padding: 0.4in;
+  :root {
+    color-scheme: light;
+    --bg: #fff;
+    --bg-code: #fff;
+    --text: #111;
+    --heading: #000;
+    --muted: #444;
+    --link: #111;
+    --border: #999;
   }
 
-  a {
-    color: #111;
+  body {
+    padding: 0.4in;
   }
 
   .toggle-body[hidden] {

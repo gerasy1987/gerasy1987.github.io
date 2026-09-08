@@ -4,6 +4,7 @@ pagetitle: "Georgiy Syunyaev"
 
 ```{=html}
 <header class="profile-header">
+  <img class="headshot" src="assets/img/profile_pic_web.jpg" alt="Georgiy Syunyaev">
   <div class="profile-intro">
     <h1>Georgiy Syunyaev</h1>
     <p class="title">
@@ -21,10 +22,9 @@ pagetitle: "Georgiy Syunyaev"
       <span class="separator">|</span>
       <a href="https://orcid.org/0000-0002-4391-6313">ORCID</a>
       <span class="separator">|</span>
-      <a href="teaching.html">Teaching</a>
+      <a href="https://as.vanderbilt.edu/political-science/bio/georgiy-syunyaev/">Faculty Page</a>
     </p>
   </div>
-  <img class="headshot" src="assets/img/profile_pic_web.jpg" alt="Georgiy Syunyaev">
 </header>
 ```
 

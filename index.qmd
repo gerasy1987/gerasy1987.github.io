@@ -1,12 +1,12 @@
 ---
-pagetitle: "Georgiy Syunyaev"
+pagetitle: "Georgiy (Gosha) Syunyaev"
 ---
 
 ```{=html}
 <header class="profile-header">
-  <img class="headshot" src="assets/img/profile_pic_web.jpg" alt="Georgiy Syunyaev">
+  <img class="headshot" src="assets/img/profile_pic_web.jpg" alt="Georgiy (Gosha) Syunyaev">
   <div class="profile-intro">
-    <h1>Georgiy Syunyaev</h1>
+    <h1>Georgiy (Gosha) Syunyaev</h1>
     <p class="title">
       Assistant Professor<br>
       Department of Political Science<br>

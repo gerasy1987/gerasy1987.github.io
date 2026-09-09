@@ -1,9 +1,9 @@
 ---
-pagetitle: "Page not found · Georgiy Syunyaev"
+pagetitle: "Page not found · Georgiy (Gosha) Syunyaev"
 ---
 
 ```{=html}
-<p class="site-nav"><a href="/">← Georgiy Syunyaev</a></p>
+<p class="site-nav"><a href="/">← Georgiy (Gosha) Syunyaev</a></p>
 ```
 
 # Page not found

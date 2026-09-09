@@ -17,6 +17,7 @@ Personal academic website of Georgiy Syunyaev. A single-page Quarto site: header
 | `assets/pdf/` | Paper PDFs linked from bib entries. |
 | `assets/html/` | Slide decks and other standalone HTML linked from outside the site. Do not rename or move these, their URLs are public. |
 | `assets/img/` | Favicon and headshot (`profile_pic.jpg` is the original, `profile_pic_web.jpg` the 400px copy the page uses). |
+| `assets/fonts/` | Self-hosted IBM Plex Sans and IBM Plex Mono (woff2, Latin and Latin Extended subsets) with their licence. |
 | `cv/syunyaev_cv.pdf` | The CV linked from the header. |
 | `CNAME`, `.nojekyll`, `robots.txt` | Copied into `docs/` on every render. `CNAME` binds the custom domain. |
 | `docs/` | Rendered site. Never edit by hand, it is overwritten on every render. |
@@ -71,6 +72,7 @@ Order of the bracketed links is fixed: Abstract, Preprint, PDF, Supplement, Pre-
 - **Headshot**: replace `assets/img/profile_pic.jpg`, then create the web copy with `sips -Z 400 assets/img/profile_pic.jpg --out assets/img/profile_pic_web.jpg`. The page sizes it to the height of the text block automatically.
 - **Coauthor links**: add a block to `_data/coauthors.yml` keyed by last name, with the first-name spellings that appear in the bib and the URL. Existing entries show the format.
 - **Theme**: edit the variables at the top of `styles.css`. The current palette is Gruvbox dark, and a Monokai Pro set is in the comment right below it. Everything else in the stylesheet uses these variables.
+- **Fonts**: the text font is IBM Plex Sans and the label font (title block, header links, bracketed links, code) is IBM Plex Mono, both self-hosted from `assets/fonts/` and declared in the `@font-face` rules at the top of `styles.css`. To switch fonts, put new woff2 files in that folder, update the `@font-face` rules, and change the `--font-text` and `--font-mono` variables. The system font stack after them is the fallback.
 - **Google Analytics**: the measurement ID is in `_quarto.yml`.
 
 ## Rendering

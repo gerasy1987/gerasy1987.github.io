@@ -16,11 +16,7 @@ website:
   site-url: https://gsyunyaev.com
   description: "Assistant Professor of Political Science at Vanderbilt University. Research on propaganda, media, and politics in autocracies."
   image: assets/img/profile_pic_web.jpg
-  open-graph:
-    site-name: "gsyunyaev.com"
-    image-width: 400
-    image-height: 400
-    image-alt: "Georgiy (Gosha) Syunyaev"
+  open-graph: true
   twitter-card:
     card-style: summary
   favicon: assets/img/favicon.png

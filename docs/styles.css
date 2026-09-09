@@ -5,8 +5,9 @@
  * Font License, see the LICENSE file there), Latin and Latin Extended
  * subsets only.
  *
- * Palette: Gruvbox dark. To switch to Monokai Pro, replace the variable
- * values in :root with the ones in the comment block below it.
+ * Palette: Gruvbox dark by default, Gruvbox light when the visitor uses
+ * the theme switch (html gets data-theme="light"). To try Monokai Pro,
+ * replace the dark values with the ones in the comment block below :root.
  */
 
 @font-face {
@@ -77,10 +78,23 @@
   --selection: #504945; /* text selection */
 }
 
-/* Monokai Pro alternative:
+/* Monokai Pro alternative for the dark palette:
  *   --bg: #2d2a2e;  --bg-code: #221f22;  --text: #fcfcfa;  --heading: #fcfcfa;
  *   --muted: #939293;  --link: #78dce8;  --border: #5b595c;  --selection: #5b595c;
  */
+
+/* Light palette (Gruvbox light), chosen with the switch. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #fbf1c7;
+  --bg-code: #f2e5bc;
+  --text: #3c3836;
+  --heading: #282828;
+  --muted: #7c6f64;
+  --link: #076678;
+  --border: #d5c4a1;
+  --selection: #d5c4a1;
+}
 
 * {
   box-sizing: border-box;
@@ -91,6 +105,7 @@ html {
 }
 
 body {
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
   padding: 36px 20px 56px;
@@ -263,6 +278,55 @@ img {
   color: var(--muted);
 }
 
+/* Theme switch button, created by the script in _includes/head.html and
+ * placed in the top right corner of the content column. */
+
+.theme-toggle {
+  position: absolute;
+  top: 36px;
+  right: 20px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--link);
+  border-color: var(--link);
+  outline: none;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-moon {
+  display: block;
+}
+
 /* Small pages (404): a one-line way back home. */
 
 .site-nav {
@@ -335,6 +399,11 @@ footer {
     font-size: 15px;
   }
 
+  .theme-toggle {
+    top: 24px;
+    right: 16px;
+  }
+
   h1 {
     font-size: 1.8rem;
   }
@@ -357,6 +426,10 @@ footer {
   }
 
   .toggle-body[hidden] {
+    display: none;
+  }
+
+  .theme-toggle {
     display: none;
   }
 }

@@ -10,7 +10,7 @@ Personal academic website of Georgiy Syunyaev. A single-page Quarto site: header
 | `404.qmd` | The page shown for unknown URLs. |
 | `_quarto.yml` | Project configuration: pages to render, output directory, files copied through, analytics ID. |
 | `styles.css` | The whole stylesheet. The colour palette is the block of variables at the top. |
-| `_includes/head.html` | Two small scripts: the `[Abstract]` and `[BibTeX]` toggles, and sizing of the headshot to the text block. |
+| `_includes/head.html` | Small scripts: the theme switch, the `[Abstract]` and `[BibTeX]` toggles, and sizing of the headshot to the text block. |
 | `_bibliography/papers.bib` | All publications, working papers, projects, and software. Edit this to change the lists. |
 | `_data/coauthors.yml` | Coauthor homepages, keyed by last name. Names in the lists become links when they match. |
 | `R/pubs.R` | Reads the bib file and prints the lists as HTML. Sourced by `index.qmd` at render time. |
@@ -71,7 +71,7 @@ Order of the bracketed links is fixed: Abstract, Preprint, PDF, Supplement, Pre-
 - **Bio, title block, header links**: edit `index.qmd`. The header is plain HTML at the top of the file, the bio is Markdown below it.
 - **Headshot**: replace `assets/img/profile_pic.jpg`, then create the web copy with `sips -Z 400 assets/img/profile_pic.jpg --out assets/img/profile_pic_web.jpg`. The page sizes it to the height of the text block automatically.
 - **Coauthor links**: add a block to `_data/coauthors.yml` keyed by last name, with the first-name spellings that appear in the bib and the URL. Existing entries show the format.
-- **Theme**: edit the variables at the top of `styles.css`. The current palette is Gruvbox dark, and a Monokai Pro set is in the comment right below it. Everything else in the stylesheet uses these variables.
+- **Theme**: dark is the default for every visitor. The sun or moon button in the top right corner switches to the light palette and back, and the choice is remembered per browser. Both palettes are variable blocks at the top of `styles.css`: `:root` holds the dark one (Gruvbox dark, with a Monokai Pro set in the comment below it) and `:root[data-theme="light"]` the light one (Gruvbox light). Everything else in the stylesheet uses these variables. To make light the default instead, swap the two sets of values and change `'light'` to `'dark'` in the two places it appears in `_includes/head.html`.
 - **Fonts**: everything on the page is IBM Plex Sans, and code and BibTeX blocks use IBM Plex Mono, both self-hosted from `assets/fonts/` and declared in the `@font-face` rules at the top of `styles.css`. To switch fonts, put new woff2 files in that folder, update the `@font-face` rules, and change the `--font-text` and `--font-mono` variables. The system font stack after them is the fallback.
 - **Google Analytics**: the measurement ID is in `_quarto.yml`.
 

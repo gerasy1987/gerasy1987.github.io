@@ -1,5 +1,15 @@
 <link rel="preload" href="assets/fonts/IBMPlexSans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>
+  // Theme: dark by default. A visitor who chose the light theme has it
+  // remembered in this browser; apply it before the page paints.
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  })();
+
   // Show or hide the [Abstract] and [BibTeX] blocks under publication entries.
   document.addEventListener('click', function (ev) {
     var a = ev.target.closest('a.toggle');
@@ -11,10 +21,33 @@
     a.setAttribute('aria-expanded', el.hidden ? 'false' : 'true');
   });
 
-  // Size the headshot to the exact height of the text block next to it
-  // (name through the links line). On narrow screens the header stacks and
-  // the stylesheet's fixed size is used instead.
   document.addEventListener('DOMContentLoaded', function () {
+    // The theme switch button, top right corner of the page.
+    var root = document.documentElement;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'theme-toggle';
+    btn.innerHTML =
+      '<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/>' +
+      '<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>' +
+      '<svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    function isLight() { return root.getAttribute('data-theme') === 'light'; }
+    function label() {
+      var text = isLight() ? 'Switch to dark theme' : 'Switch to light theme';
+      btn.setAttribute('aria-label', text);
+      btn.title = text;
+    }
+    btn.addEventListener('click', function () {
+      if (isLight()) root.removeAttribute('data-theme'); else root.setAttribute('data-theme', 'light');
+      try { localStorage.setItem('theme', isLight() ? 'light' : 'dark'); } catch (e) {}
+      label();
+    });
+    label();
+    document.body.appendChild(btn);
+
+    // Size the headshot to the exact height of the text block next to it
+    // (name through the links line). On narrow screens the header stacks and
+    // the stylesheet's fixed size is used instead.
     var img = document.querySelector('.profile-header .headshot');
     var intro = document.querySelector('.profile-header .profile-intro');
     if (!img || !intro) return;

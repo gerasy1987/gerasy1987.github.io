@@ -24,7 +24,7 @@ pagetitle: "Georgiy Syunyaev"
 </header>
 ```
 
-I am an assistant professor in the [Department of Political Science at Vanderbilt University](https://as.vanderbilt.edu/political-science/) and a fellow at the [Institutions and Political Inequality Unit](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality) of the Berlin Social Science Center (WZB). I hold a Ph.D. in Political Science from Columbia University.
+I am an assistant professor in the [Department of Political Science](https://as.vanderbilt.edu/political-science/) at Vanderbilt University and a fellow at the [Institutions and Political Inequality Unit](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality) of the Berlin Social Science Center (WZB). I hold a Ph.D. in Political Science from Columbia University.
 
 My research examines how citizens in autocracies respond to propaganda and independent media, how autocrats make policy decisions such as decentralization, and how internet access changes political engagement. I rely on survey and field experiments, formal theory, and qualitative work, with a focus on Russia and other post-Soviet countries, and I also work on the measurement of hard-to-reach populations.
 

@@ -15,13 +15,9 @@ pagetitle: "Georgiy Syunyaev"
     </p>
     <p class="profile-links">
       <a href="cv/syunyaev_cv.pdf">CV</a>
-      <span class="separator">|</span>
       <a href="https://scholar.google.com/citations?user=QeJSq9YAAAAJ">Google Scholar</a>
-      <span class="separator">|</span>
       <a href="https://github.com/gerasy1987">GitHub</a>
-      <span class="separator">|</span>
       <a href="https://orcid.org/0000-0002-4391-6313">ORCID</a>
-      <span class="separator">|</span>
       <a href="https://as.vanderbilt.edu/political-science/bio/georgiy-syunyaev/">Faculty Page</a>
     </p>
   </div>

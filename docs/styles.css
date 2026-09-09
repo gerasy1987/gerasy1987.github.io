@@ -242,17 +242,23 @@ img {
   font-size: 0.95em;
 }
 
+/* Header links, separated by bars. The bar belongs to the link before it,
+ * so a wrapped line ends with a bar rather than starting with one. */
+
 .profile-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem 0.45rem;
+  gap: 0.25rem 0;
   align-items: center;
   margin-bottom: 0;
   font-family: var(--font-mono);
   font-size: 0.95em;
 }
 
-.profile-links .separator {
+.profile-links a:not(:last-child)::after {
+  content: "|";
+  display: inline-block;
+  margin: 0 0.5rem;
   color: var(--muted);
 }
 
@@ -328,14 +334,6 @@ footer {
 
   h1 {
     font-size: 1.8rem;
-  }
-
-  .profile-links {
-    display: block;
-  }
-
-  .profile-links .separator {
-    margin: 0 0.2rem;
   }
 }
 

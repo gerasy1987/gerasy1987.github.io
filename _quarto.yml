@@ -23,7 +23,7 @@ format:
   html:
     minimal: true
     css: styles.css
-    include-in-header: _includes/quarto-head.html
+    include-in-header: _includes/head.html
     lang: en
     toc: false
     anchor-sections: false

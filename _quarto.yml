@@ -12,7 +12,7 @@ project:
     - robots.txt
 
 website:
-  title: "Georgiy (Gosha) Syunyaev"
+  title: "Georgiy [Gosha] Syunyaev"
   site-url: https://gsyunyaev.com
   description: "Assistant Professor of Political Science at Vanderbilt University. Research on propaganda, media, and politics in autocracies."
   image: assets/img/profile_pic_web.jpg
